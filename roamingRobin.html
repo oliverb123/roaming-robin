@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Roaming Robin</title>
+    </head>
+    <body>
+        <p>This tool converts the tweet.js file in your twitter archive into a json file which can be imported into roam. It is a static application, so <b>no information you enter or file you upload here ever leaves your computer</b>. Trust me, I don't want to know who you are so much more than you dno't want me to know who you are. Or don't trust me, hit ctrl-shift-I (assuming you're using chrome, otherwise google "whatever-browser developer tools"), open the "network" tab, upload a test file and watch nothing get sent.</p>
+        <p><b>Note: This tool is experimental and fairly untested, use at your own risk</b>. If you get really mad you can shout at me <a href="https://twitter.com/ollybot_redux">@ollybot_redux</a>. I would recommend spinning up a new graph to test it once before you integrate it into your existing setup.</p>
+        <p>I also expect to improve this in the future (through the use of block refs for a start), and roam does not support updating blocks via import, so you might want to be willing to delete whatever graph you've got the tweets loaded into when/if a new version of this rolls around.</p>
+        <p>How to use:</p>
+        <ol>
+            <li>Have your twitter archive downloaded and unpacked. <a href="https://help.twitter.com/en/managing-your-account/how-to-download-your-twitter-archive">How do I do this?</a></li>
+            <li>Enter your <b>roam research account associated</b> email below</li>
+            <li>Upload the <b>tweet.js file</b> from your twitter archive</li>
+            <li>A file titled "data.json" will appear in your downloads. If prompted to accept the download, do</li>
+            <li>Upload this data.json file to roam (I'm sure if this is the kinda thing you're considering doing, you'll already know how to do that)</li>
+            <li>For any day you tweeted, the tweet will now appear under that days "daily note", under a "#tweets" heading</li>
+        </ol>
+        <input type="text" id="email_input" placeholder="example@email.com">
+        <input type="file" id="file_upload">
+        <script src="roamingRobin.js"></script>
+    </body>
+</html>
